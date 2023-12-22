@@ -1,10 +1,6 @@
 #!/usr/bin/python3
-
-
 import sys
 import time
-
-
 def factorize(num):
     '''Takes a number as input.
     Args:
@@ -47,8 +43,7 @@ for line in lines:
             print(f"{num}={factors[0]}*{factors[1]}")
 
 
-     
-        if time.time() - start_time > 5:
+             if time.time() - start_time > 5:
             print("Time limit exceeded")
             exit()
 
