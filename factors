@@ -2,12 +2,6 @@
 import sys
 import time
 def factorize(num):
-    '''Takes a number as input.
-    Args:
-        num: input integer.
-        Return: A tuple of two factors if the number is not a prime.
-                None if the number is prime.
-    '''
     for i in range(2, int(num**0.5)+1):
         if num % i == 0:
             return (i, num//i)
@@ -16,9 +10,6 @@ def factorize(num):
 
 if __name__ == "__main__":
 
-
-    '''Reads the input file.
-    '''
     if len(sys.argv) != 2:
         print("Usage: factors <file>")
         exit()
@@ -36,14 +27,14 @@ if __name__ == "__main__":
 
 
     start_time = time.time()
-for line in lines:
+
+    for line in lines:
         num = int(line.strip())
         factors = factorize(num)
         if factors:
             print(f"{num}={factors[0]}*{factors[1]}")
 
-
-             if time.time() - start_time > 5:
+        if time.time() - start_time > 5:
             print("Time limit exceeded")
             exit()
 
